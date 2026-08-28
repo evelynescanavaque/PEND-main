@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de produtos</title>
+</head>
+
+<body>
+    <main class="conteudo">
+        <header class="cabecalho">
+            <p class="eyebrow">Exercício 4</p>
+            <h1 id="titulo">Cadastro de produtos</h1>
+            <p class="descricao">Adicione produtos e acompanhe os valores com desconto.</p>
+        </header>
+
+        <section class="painel cadastro" aria-labelledby="titulo">
+            <div class="campo">
+                <label for="nome">Nome do produto</label>
+                <input id="nome" type="text" placeholder="Ex.: Camiseta básica">
+            </div>
+
+            <div class="linha-campos">
+                <div class="campo">
+                    <label for="preco">Preço</label>
+                    <input id="preco" type="number" min="0" step="0.01" placeholder="0,00">
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoria</label>
+                    <input id="categoria" type="text" placeholder="Ex.: Vestuário">
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="desconto">Desconto (%)</label>
+                <input id="desconto" type="number" min="0" max="100" step="0.01" placeholder="0">
+            </div>
+
+            <div class="acoes">
+                <button id="cadastrar" type="button">Cadastrar produto</button>
+                <button id="excluir" class="botao-secundario" type="button">Excluir produto</button>
+            </div>
+        </section>
+
+        <section class="painel resultados" aria-labelledby="titulo-resultados">
+            <div class="cabecalho-resultados">
+                <p class="eyebrow">Lista salva</p>
+                <h2 id="titulo-resultados">Produtos cadastrados</h2>
+            </div>
+            <div id="resultado" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

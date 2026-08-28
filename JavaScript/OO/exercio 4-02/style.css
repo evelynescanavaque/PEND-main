@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    --rosa-principal: #d94f83;
+    --rosa-escuro: #b83268;
+    --rosa-claro: #fff1f6;
+    --texto: #3e2632;
+    --texto-suave: #866b78;
+    --borda: #f1cbd9;
+
+    background: linear-gradient(145deg, #fff8fb 0%, #fce8f1 100%);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 48px 20px;
+    color: var(--texto);
+}
+
+.conteudo {
+    width: min(100%, 760px);
+}
+
+.cabecalho {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: var(--rosa-principal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#titulo {
+    color: var(--texto);
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.painel {
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(241, 203, 217, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 18px 45px rgba(135, 48, 86, 0.09);
+    padding: 28px;
+}
+
+.cadastro {
+    margin-bottom: 24px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.linha-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--texto);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+input:focus {
+    background-color: #fff;
+    border-color: var(--rosa-principal);
+    box-shadow: 0 0 0 3px rgba(217, 79, 131, 0.14);
+}
+
+input::placeholder {
+    color: var(--texto-suave);
+}
+
+button {
+    width: 100%;
+    padding: 13px 16px;
+    margin-top: 10px;
+    background-color: var(--rosa-principal);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(184, 50, 104, 0.2);
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--rosa-escuro);
+    box-shadow: 0 10px 22px rgba(184, 50, 104, 0.28);
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(184, 50, 104, 0.25);
+    outline-offset: 3px;
+}
+
+.acoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.botao-secundario {
+    background-color: transparent;
+    border: 1px solid var(--borda);
+    box-shadow: none;
+    color: var(--rosa-escuro);
+}
+
+.botao-secundario:hover {
+    background-color: var(--rosa-claro);
+    box-shadow: none;
+}
+
+.cabecalho-resultados {
+    border-bottom: 1px solid var(--borda);
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+}
+
+.cabecalho-resultados .eyebrow {
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--texto);
+    font-size: 19px;
+}
+
+#resultado {
+    color: var(--texto-suave);
+    line-height: 1.6;
+}
+
+#resultado > div {
+    border-bottom: 1px solid #f5dce6;
+    padding: 4px 0 18px;
+}
+
+#resultado > div + div {
+    padding-top: 18px;
+}
+
+#resultado > div:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+#resultado p {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    font-size: 14px;
+}
+
+#resultado strong {
+    color: var(--texto);
+}
+
+#resultado button {
+    background: var(--rosa-claro);
+    border: 1px solid var(--borda);
+    box-shadow: none;
+    color: var(--rosa-escuro);
+    font-size: 12px;
+    margin-top: 14px;
+    padding: 9px 12px;
+    width: auto;
+}
+
+#resultado button:hover {
+    background: #fbdde9;
+    box-shadow: none;
+}
+
+#resultado hr {
+    display: none;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+
+    .linha-campos,
+    .acoes {
+        grid-template-columns: 1fr;
+    }
+
+    #resultado p {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+}

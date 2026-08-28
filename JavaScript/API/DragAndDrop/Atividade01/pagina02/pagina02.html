@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira fase</title>
+    <link rel="stylesheet" href="pagina02.css">
+</head>
+<body>
+    <main class="fase">
+        <h1>Nível 1</h1>
+        <h2>Quantas uvas há aqui?</h2>
+
+        <div id="area-uvas" class="area-uvas" aria-label="Área com dez uvas">
+            <img class="uva uva-1" src="../img/uvaVerde.png" alt="Uva 1" draggable="true">
+            <img class="uva uva-2" src="../img/uvaVerde.png" alt="Uva 2" draggable="true">
+            <img class="uva uva-3" src="../img/uvaVerde.png" alt="Uva 3" draggable="true">
+            <img class="uva uva-4" src="../img/uvaVerde.png" alt="Uva 4" draggable="true">
+            <img class="uva uva-5" src="../img/uvaVerde.png" alt="Uva 5" draggable="true">
+            <img class="uva uva-6" src="../img/uvaVerde.png" alt="Uva 6" draggable="true">
+            <img class="uva uva-7" src="../img/uvaVerde.png" alt="Uva 7" draggable="true">
+            <img class="uva uva-8" src="../img/uvaVerde.png" alt="Uva 8" draggable="true">
+            <img class="uva uva-9" src="../img/uvaVerde.png" alt="Uva 9" draggable="true">
+            <img class="uva uva-10" src="../img/uvaVerde.png" alt="Uva 10" draggable="true">
+        </div>
+
+        <div class="contador-area">
+            <button id="botao-menos" type="button" aria-label="Diminuir quantidade">-</button>
+            <span id="contador" aria-live="polite">0</span>
+            <button id="botao-mais" type="button" aria-label="Aumentar quantidade">+</button>
+        </div>
+
+        <button id="botao-confirmar" type="button">Confirmar</button>
+        <p id="mensagem" aria-live="polite"></p>
+        <a id="botao-proxima-fase" href="../pagina03/pagina03.html">Próxima fase</a>
+    </main>
+
+    <script src="pagina02.js"></script>
+
+</body>
+</html>

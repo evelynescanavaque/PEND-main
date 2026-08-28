@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceira fase</title>
+    <link rel="stylesheet" href="pagina03.css">
+</head>
+
+<body>
+    <main class="fase">
+        <h1>Nível 3</h1>
+        <h2>Descubra qual alimento é bom para o Bruno!</h2>
+
+        <div id="area-jogo" class="area-jogo" aria-label="Área do desafio de alimentação">
+            <img id="personagem" class="personagem" src="../img/HomemGordo.png" alt="Bruno">
+
+            <img id="alimento-uva" class="alimento alimento-uva" src="../img/uvaVerde.png" alt="Uva verde"
+                draggable="false">
+            <img id="alimento-hamburguer" class="alimento alimento-hamburguer" src="../img/hamburguer.png"
+                alt="Hambúrguer" draggable="false">
+        </div>
+
+        <p id="instrucao" class="instrucao" aria-live="polite">Arraste um alimento até o Bruno para alimentá-lo.</p>
+    </main>
+
+
+    <div id="modal-mensagem" class="modal-mensagem" aria-hidden="true">
+        <div class="modal-caixa">
+            <p id="modal-emoji" class="modal-emoji"></p>
+            <p id="modal-titulo" class="modal-titulo"></p>
+            <p id="modal-texto" class="modal-texto"></p>
+            <button id="botao-jogar-novamente" type="button">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="paguna03.js"></script>
+</body>
+
+</html>

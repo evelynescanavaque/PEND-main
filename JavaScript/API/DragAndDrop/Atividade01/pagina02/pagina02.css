@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	align-items: center;
+	background: linear-gradient(135deg, #17102e, #33205d);
+	color: #ffffff;
+	display: flex;
+	font-family: Arial, sans-serif;
+	justify-content: center;
+	margin: 0;
+	min-height: 100vh;
+	padding: 24px;
+}
+
+.fase {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	max-width: 720px;
+	text-align: center;
+	width: 100%;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+.area-uvas {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 2px dashed rgba(255, 255, 255, 0.6);
+	border-radius: 14px;
+	height: 480px;
+	overflow: hidden;
+	position: relative;
+	width: min(100%, 680px);
+}
+
+.uva {
+	cursor: grab;
+	height: 135px;
+	object-fit: contain;
+	position: absolute;
+	user-select: none;
+	width: 115px;
+}
+
+.uva:active,
+.uva.arrastando {
+	cursor: grabbing;
+}
+
+/* As uvas 9 e 10 ficam sobre as uvas 1 e 2 ate serem arrastadas. */
+.uva-1 { left: 3%; top: 8%; }
+.uva-2 { left: 39%; top: 7%; }
+.uva-3 { left: 72%; top: 8%; }
+.uva-4 { left: 17%; top: 36%; }
+.uva-5 { left: 57%; top: 38%; }
+.uva-6 { left: 4%; top: 68%; }
+.uva-7 { left: 39%; top: 69%; }
+.uva-8 { left: 73%; top: 67%; }
+.uva-9 { left: 3%; top: 8%; z-index: 2; }
+.uva-10 { left: 39%; top: 7%; z-index: 2; }
+
+.contador-area {
+	align-items: center;
+	display: flex;
+	gap: 18px;
+}
+
+.contador-area button {
+	background-color: #ffcc18;
+	border: 2px solid #1c103b;
+	border-radius: 8px;
+	color: #1c103b;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
+	height: 42px;
+	width: 46px;
+}
+
+#contador {
+	font-size: 1.7rem;
+	font-weight: bold;
+	min-width: 32px;
+}
+
+#botao-confirmar,
+#botao-proxima-fase {
+	background-color: #ffcc18;
+	border: 2px solid #1c103b;
+	border-radius: 8px;
+	color: #1c103b;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 10px 24px;
+	text-decoration: none;
+}
+
+#botao-proxima-fase {
+	display: none;
+}
+
+#botao-proxima-fase.visivel {
+	display: inline-block;
+}
+
+#mensagem {
+	font-weight: bold;
+	min-height: 24px;
+	margin: 0;
+}
+
+.acerto {
+	color: #8dff9d;
+}
+
+.erro {
+	color: #ff9b9b;
+}
+
+@media (max-width: 520px) {
+	.area-uvas {
+		height: 390px;
+	}
+
+	.uva {
+		height: 105px;
+		width: 90px;
+	}
+}
+ 
