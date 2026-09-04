@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0d1117;
+    color: #f0f0f0;
+}
+
+.topo {
+    background-color: #0a2540;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid #1e90ff;
+}
+
+.topo h1 {
+    color: #1e90ff;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.subtitulo {
+    color: #b0c4de;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.cartao {
+    background-color: #161b22;
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.cartao h2 {
+    color: #1e90ff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.cartao p {
+    color: #d0d0d0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.info-localizacao {
+    background-color: #0d1117;
+    border: 1px solid #1e3a5f;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.info-localizacao p {
+    margin-bottom: 6px;
+    color: #b0c4de;
+    font-size: 14px;
+}
+
+.info-localizacao span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+button {
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0a5ac2;
+}
+
+.botoes-camera {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    border: 2px solid #1e3a5f;
+    background-color: #000000;
+    margin-top: 10px;
+}
+
+#fotoCapturada {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    border: 2px solid #1e90ff;
+    margin-top: 15px;
+}
+
+.mensagem {
+    text-align: center;
+    color: #1e90ff;
+    font-weight: bold;
+    padding: 12px;
+    min-height: 20px;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    color: #6c7a89;
+    font-size: 13px;
+    border-top: 1px solid #1e3a5f;
+    margin-top: 30px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VagaJá - Cadastro para Busca de Emprego</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <h1>VagaJá</h1>
+        <p class="subtitulo">Cadastre-se e encontre a vaga ideal para você</p>
+    </header>
+
+    <main class="container">
+
+        <section class="cartao">
+            <h2>📍 Localização</h2>
+            <p>Precisamos da sua localização para mostrar vagas próximas de você.</p>
+
+            <div class="info-localizacao">
+                <p>Latitude: <span id="latitude">Aguardando...</span></p>
+                <p>Longitude: <span id="longitude">Aguardando...</span></p>
+                <p>Precisão: <span id="precisao">Aguardando...</span></p>
+            </div>
+
+            <button onclick="obterLocalizacao()">Obter Localização</button>
+        </section>
+
+        <section class="cartao">
+            <h2>📷 Foto de Perfil</h2>
+            <p>Ative a câmera e tire uma foto para o seu cadastro.</p>
+
+            <video id="camera" width="500" autoplay></video>
+
+            <br>
+
+            <div class="botoes-camera">
+                <button onclick="iniciarCamera()">Ativar Câmera</button>
+                <button onclick="tirarFoto()">Tirar Foto</button>
+            </div>
+
+            <canvas id="canvas" style="display:none;"></canvas>
+            <img id="fotoCapturada" alt="Foto capturada" style="display:none;">
+        </section>
+
+        <p id="mensagem" class="mensagem"></p>
+
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 VagaJá - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="pagina.js"></script>
+
+</body>
+
+</html>
