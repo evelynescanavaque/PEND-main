@@ -1,0 +1,395 @@
+:root {
+    --roxo-escuro: #10051c;
+    --roxo-fundo: #180a29;
+    --roxo-card: #211033;
+    --roxo: #8b5cf6;
+    --roxo-claro: #c4a7ff;
+    --roxo-brilho: #a875ff;
+    --branco: #f8f5ff;
+    --texto: #b9a9d2;
+    --borda: rgba(196, 167, 255, 0.16);
+    --sombra: rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--branco);
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(139, 92, 246, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            var(--roxo-escuro),
+            var(--roxo-fundo)
+        );
+}
+
+header {
+    text-align: center;
+    padding: 55px 20px 40px;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 0 25px rgba(139, 92, 246, 0.25);
+}
+
+.logo span {
+    color: var(--roxo-claro);
+}
+
+header p {
+    margin-top: 10px;
+    color: var(--texto);
+    font-size: 15px;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.pesquisa {
+    text-align: center;
+}
+
+.pesquisa h1 {
+    margin-bottom: 22px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    max-width: 850px;
+    margin: auto;
+    padding: 8px;
+
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow:
+        0 15px 40px var(--sombra),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    backdrop-filter: blur(12px);
+}
+
+#campoBusca {
+    flex: 1;
+
+    padding: 15px 16px;
+
+    border: none;
+    outline: none;
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: var(--branco);
+
+    font-size: 16px;
+}
+
+#campoBusca::placeholder {
+    color: var(--texto);
+}
+
+#btnBuscar {
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        var(--roxo),
+        var(--roxo-brilho)
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+#btnBuscar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(139, 92, 246, 0.35);
+
+    filter: brightness(1.1);
+}
+
+#btnBuscar:active {
+    transform: translateY(0);
+}
+
+.resultado {
+    margin-top: 55px;
+}
+
+.resultado h2 {
+    margin-bottom: 22px;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.filmes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.filme-card {
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        180deg,
+        #261239,
+        var(--roxo-card)
+    );
+
+    border: 1px solid var(--borda);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.filme-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(183, 148, 246, 0.4);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(139, 92, 246, 0.08);
+}
+
+.filme-card img,
+.filme-card__poster {
+    width: 100%;
+    height: 300px;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #12091c;
+
+    transition: transform 0.4s ease;
+}
+
+.filme-card:hover img,
+.filme-card:hover .filme-card__poster {
+    transform: scale(1.04);
+}
+
+.filme-card__corpo {
+    padding: 18px;
+}
+
+.filme-card__titulo {
+    margin-bottom: 9px;
+
+    color: var(--branco);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.filme-card__info {
+    margin-bottom: 11px;
+
+    color: var(--roxo-claro);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.filme-card__sinopse {
+    color: var(--texto);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.mensagem {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: var(--texto);
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+footer {
+    margin-top: 80px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--borda);
+
+    color: var(--texto);
+
+    background: rgba(0, 0, 0, 0.12);
+}
+
+footer strong {
+    color: var(--roxo-claro);
+}
+
+@media (max-width: 1000px) {
+    .filmes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding-top: 40px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .filmes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filme-card img,
+    .filme-card__poster {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .pesquisa h1 {
+        font-size: 24px;
+    }
+
+    .barra-pesquisa {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #campoBusca {
+        width: 100%;
+        padding: 14px;
+    }
+
+    #btnBuscar {
+        width: 100%;
+        height: 46px;
+    }
+
+    .resultado {
+        margin-top: 40px;
+    }
+
+    .filmes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .filme-card img,
+    .filme-card__poster {
+        height: 240px;
+    }
+
+    .filme-card__corpo {
+        padding: 14px;
+    }
+
+    .filme-card__titulo {
+        font-size: 16px;
+    }
+
+    .filme-card__info {
+        font-size: 12px;
+    }
+
+    .filme-card__sinopse {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .filmes {
+        grid-template-columns: 1fr;
+    }
+
+    .filme-card img,
+    .filme-card__poster {
+        height: 330px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+}

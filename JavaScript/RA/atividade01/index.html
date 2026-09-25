@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieSearch - Filmes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            🎬 Movie<span>Search</span>
+        </div>
+
+        <p>Pesquise seus filmes favoritos</p>
+    </header>
+
+    <main>
+
+        <section class="pesquisa">
+
+            <h1>Encontre um filme</h1>
+
+            <div class="barra-pesquisa">
+
+                <input 
+                    type="text" 
+                    id="campoBusca"
+                    placeholder="Digite o nome de um filme..."
+                >
+
+                <button id="btnBuscar">
+                    🔍 Buscar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="resultado">
+
+            <h2 id="tituloResultado">
+                Filmes encontrados
+            </h2>
+
+            <div id="filmes" class="filmes"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Dados fornecidos por
+            <strong>TMDB</strong>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
