@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pauta — boletim de notícias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead__top">
+    <span class="masthead__date" id="today-date">carregando data…</span>
+    <span class="masthead__ticker" id="fx-ticker">Cotação do dólar carregando…</span>
+  </div>
+  <h1 class="masthead__title">Evelyn em Pauta</h1>
+  <p class="masthead__tagline">Te digo o que está em pauta agora, direto das fontes</p>
+  <div class="masthead__search">
+    <input type="search" id="search-input" placeholder="Buscar por assunto, lugar ou nome…" aria-label="Buscar notícias">
+    <button id="search-button" type="button">Buscar</button>
+  </div>
+</header>
+
+<nav class="sections" id="section-tabs" aria-label="Seções">
+  <button type="button" class="section-tab active" data-category="general">Geral</button>
+  <button type="button" class="section-tab" data-category="technology">Tecnologia</button>
+  <button type="button" class="section-tab" data-category="business">Negócios</button>
+  <button type="button" class="section-tab" data-category="sports">Esporte</button>
+  <button type="button" class="section-tab" data-category="entertainment">Cultura</button>
+  <button type="button" class="section-tab" data-category="health">Saúde</button>
+  <button type="button" class="section-tab" data-category="science">Ciência</button>
+</nav>
+
+<main>
+  <p class="status" id="status" hidden></p>
+  <section class="lead" id="lead-story" aria-live="polite"></section>
+  <section class="list" id="story-list"></section>
+</main>
+
+<footer class="masthead__foot">
+  <p>Projeto SA03 — Programação Front-End, SENAI · Notícias via NewsAPI · Desenvolvido por Evelyn Caporali Escanavaque</p>
+</footer>
+
+<div class="clippings" id="clippings">
+  <button type="button" class="clippings__toggle" id="clippings-toggle">
+    Recortes <span class="clippings__count" id="clippings-count">0</span>
+  </button>
+  <div class="clippings__tray" id="clippings-tray" hidden></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
